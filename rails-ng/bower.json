@@ -1,0 +1,26 @@
+{
+  "name": "rails-ng",
+  "version": "0.0.0",
+  "homepage": "https://github.com/linemanjs/lineman-angular-template",
+  "authors": [
+    "timsvoice <timsethvoice@gmail.com>"
+  ],
+  "description": "base angular-lineman config",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "angular",
+    "foundation",
+    "lineman"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "/vendor/bower",
+    "test",
+    "tests"
+  ]
+}

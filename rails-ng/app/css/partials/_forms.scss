@@ -1,0 +1,86 @@
+input[type=text],select , textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  border: 1px solid $brand-color;
+}
+ 
+input[type=text]:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 5px $brand-color;
+  border: 1px solid $brand-color;
+}
+
+// New Vendor Form
+
+form.vendor {
+  position: relative;
+  input.vendor-title {
+    @extend .vendor-title !optional;
+    font-weight: $heavy-text;
+    font-size: 1.1rem;
+    color: $white;
+    background: $dark-brand;
+    border: none;
+    margin: 0rem;
+    line-height: 1.25rem;
+    min-height: 47px;
+  }
+  input.vendor-website {
+    background: lighten($brand-color, 20%);
+    font-weight: $heavy-text;
+    text-align: center;
+    min-height: 48px;
+    margin-bottom: 0;
+    &:focus {
+      background-color: lighten($brand-color, 20%);
+    }
+  }
+  select.vendor-category {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  textarea.vendor-description {
+    border-top: none;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    min-height: 5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    color: $black !important;
+      &::-webkit-input-placeholder {
+        color: $black;
+      }
+
+      &:-moz-placeholder { /* Firefox 18- */
+         color: $black;  
+      }
+
+      &::-moz-placeholder {  /* Firefox 19+ */
+         color: $black;  
+      }
+
+      &:-ms-input-placeholder {  
+         color: $black;  
+      }  
+  }
+  input[type="submit"] {
+  }
+}
+
+::-webkit-input-placeholder {
+   color: $gray;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $gray;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $gray;  
+}
+
+:-ms-input-placeholder {  
+   color: $gray;  
+}

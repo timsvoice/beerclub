@@ -1,0 +1,83 @@
+.inactive {
+  background-color: darken($gray, 10%) !important;
+  a {
+    color: darken($gray, 30%) !important;
+  }
+}
+
+.button.featured {
+  background-color: inherit;
+  border: $white 0.125rem solid;
+  color: $gray;
+  font-size: 1rem;
+  font-weight: $heavy-text;
+  margin-right: 1rem;
+  &:hover {
+    background-color: $gray-background;
+    color: $black;
+  }
+  @include breakpoint(small) {
+    font-size: 0.75rem;
+    border: $white 1px solid;
+  }
+}
+
+.button.vendor {
+  padding-top: 0.75rem;
+  margin-bottom: 0;
+  height: 3rem;
+  background-color: lighten($brand-color, 20%);
+}
+
+.button.base {
+  padding-top: 0.75rem;
+  margin-bottom: 0;
+  height: 3rem;
+  background-color: lighten($brand-color, 0%)
+}
+
+button.clear {
+  padding: 1rem 1.5rem;
+  background: none;
+  border: 0.125rem $white solid;
+  color: $white;
+  display: block;
+  margin-bottom: 1rem;
+  &:hover {
+    background: $brand-color;
+  }
+}
+
+.top-bar-section {
+  background-color: inherit;
+  ul {
+    background-color: inherit;
+    margin-right: 1rem;
+  }
+}
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  background-color: inherit;
+  font-size: 1.5rem;
+  color: $white;
+  font-weight: $light-text;
+  text-transform: capitalize;
+  margin-top: 1rem;
+  text-align: center;
+    &:hover {
+      background-color: $brand-color;
+    }
+    &.info {
+      margin-right: 1rem;
+    }
+}
+
+.menu-divider {
+  @extend divider !optional;
+  margin-top: 1.5rem;
+  border-right: 0.125rem solid $gray;
+}
+
+.button-row {
+  display: block;
+}
