@@ -27,6 +27,7 @@
   &-rating {
     @include grid-block();
     @include grid-layout(5);
+    @extend .small-10;
     margin-left: 0;
     &-star {
       @include grid-content();

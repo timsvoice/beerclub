@@ -2897,7 +2897,7 @@ meter {
     padding: 0 1rem 1rem;
     flex: 0 0 11.11111%; }
 
-.small-10 {
+.small-10, .beer-rating {
   flex: 0 0 83.33333%;
   max-width: 83.33333%; }
 
