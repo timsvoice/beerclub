@@ -1,0 +1,34 @@
+/* ============================ 
+  Colors
+============================ */
+
+$black: hsla(0,0,10%,1);
+$white-space: hsla(0,0,98%,1);
+$brand-color: hsla(124,30%,40%,1);
+$beer-color: hsla(45,95,60%,1);
+$accent-color: hsla(51,98%,50%,0.83);
+$divider-color: hsla(0,0,90%,1);
+
+/* ============================ 
+  Typography
+============================ */
+
+$body-font: "Lato", Helvetica, Arial, sans-serif;
+$text-font: "minion-pro", Times, serif;
+
+$heavy-text:900;
+$medium-text:400;
+$light-text:300;
+
+$underline: 0.0625rem dotted;
+
+/* ============================ 
+  Borders
+============================ */
+
+$border-thick: 0.125rem $black solid;
+$border-thin:  0.125rem $gray solid;
+
+/* ============================ 
+  Backgrounds
+============================ */

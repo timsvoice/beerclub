@@ -13,7 +13,7 @@ class BeersControllerTest < ActionController::TestCase
 
   test "should create beer" do
     assert_difference('Beer.count') do
-      post :create, beer: { name: @beer.name }
+      post :create, beer: { brewery: @beer.brewery, location: @beer.location, name: @beer.name, rating: @beer.rating }
     end
 
     assert_response 201
@@ -25,7 +25,7 @@ class BeersControllerTest < ActionController::TestCase
   end
 
   test "should update beer" do
-    put :update, id: @beer, beer: { name: @beer.name }
+    put :update, id: @beer, beer: { brewery: @beer.brewery, location: @beer.location, name: @beer.name, rating: @beer.rating }
     assert_response 204
   end
 

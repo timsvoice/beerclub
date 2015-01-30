@@ -1,0 +1,40 @@
+// global
+
+* {
+  font-family: $body-font;
+}
+
+.bold {
+  font-weight: $heavy-text;
+}
+
+// beer
+
+.new-beer {
+  &-title {
+    color: $white-space;
+    font-size: 1.5rem;
+    font-weight: $heavy-text;
+  }
+}
+
+.beer {
+  &-name {
+    font-size: 1.5rem;
+    font-weight: $heavy-text;
+  }
+  &-brewery {
+    font-size: 0.85rem;
+    font-weight: $light-text;
+  }
+  &-location {
+    font-size: 1rem;
+    &-title {
+      font-size: 0.85rem;
+      font-weight: $light-text;
+    }
+    &-text {
+      font-size: 1rem;
+    }
+  }
+}
