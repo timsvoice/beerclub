@@ -5,9 +5,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
   //
   // Now set up the states
   $stateProvider
-    .state('home', {
+    .state('beer', {
       url: "/",
-      templateUrl: "home.html",
+      templateUrl: "beer.html",
+      controller: "beerCtrl"
+    })
+    .state('gird', {
+      url: "/grid",
+      templateUrl: "grid.html",
       controller: "beerCtrl"
     });
 });

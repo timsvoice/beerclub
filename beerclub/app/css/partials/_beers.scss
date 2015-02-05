@@ -1,12 +1,127 @@
-.new-beer {
-  @include grid-content();
-  background-color: $beer-color;
-  margin-bottom: 1rem;
-  &-title {
-    text-align: center;
-    padding: 1rem;
+// .new-beer {
+//   @include grid-block();
+//   @extend .small-12;
+//   background-color: $beer-color;
+//   margin-bottom: 1rem;
+//   &-button {
+//     @include grid-content();
+//   }
+//   &-title {
+//     text-align: center;
+//     padding: 1rem;
+//   }
+//   &-container {
+//     @include grid-block();
+//     // @include grid-layout(1);
+//   }
+// }  
+
+// .beer {
+//   &-container {
+//     // @include grid-block();
+//   }
+//   &-list {
+//     @include grid-block();
+//     @include grid-layout(3);
+//     @include breakpoint(small) {
+//       @include grid-layout(1);
+//     } 
+//   }
+//   &-item {
+//     @include grid-content();
+//     border-bottom: 0.125rem solid $divider-color;
+//     margin-top: 1rem;
+//   }
+//   &-rating {
+//     @include grid-block();
+//     @include grid-layout(5);
+//     @extend .small-10;
+//     margin-left: 0;
+//     &-star {
+//       @include grid-content();
+//       background-size: 3rem;
+//       height: 3rem;
+//       width: 3rem;
+//       background-image: url('../img/star.png');
+//       background-repeat: no-repeat;
+//     }
+//     &-no-star {
+//       @include grid-content();
+//       background-size: 3rem;
+//       height: 3rem;
+//       width: 3rem;
+//       background-image: url('../img/unstar.png');
+//       background-repeat: no-repeat; 
+//     }
+//   }
+// }
+
+.view {
+  // @include grid-frame(vertical);
+  // @extend .grid-frame;
+  // @extend .vertical;
+  // @extend .shrink, .wrap;
+}
+
+.header {
+  @extend %title-bar;
+  border-bottom: 1px solid $gray;
+  @include grid-content(
+    $size: shrink
+  );
+  .title {
+    @extend .left;
   }
-}  
+  .new-beer {
+  }
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.new-beer-search {
+  @extend .inline-label;  
+  height: 2.1rem;
+  @extend .small-12;
+  input {
+    height: 1rem;
+    font-size: 0.75rem;
+  }
+  .button {
+    height: 2.125rem;
+    font-size: 0.75rem;
+    margin-bottom: 0rem;
+  }
+}
+
+.new-beer-panel {
+  @extend %panel-base;
+  @extend .align-center;  
+  @include panel-layout(
+    $position: top,
+    $size: 2.3rem
+  );
+  @include slide(
+    $dir: in,
+    $from: top,
+    $fade: true,
+    $duration: 0.125s,
+    $timing: easeIn
+  );
+  @include slide(
+    $dir: out,
+    $from: top,
+    $duration: 0.125s
+  );
+}
+
+.app-container {
+  // @include grid-frame();
+  @include grid-block;
+}
+
+.container {
+  @include grid-block();  
+}
 
 .beer {
   &-container {
@@ -14,28 +129,28 @@
   }
   &-list {
     @include grid-block();
-    @include grid-layout(3);
-    @include breakpoint(small) {
-      @include grid-layout(1);
-    } 
+    // use gird-layout on the parent block
+    @include grid-layout(1);
+    @include breakpoint(medium) {
+      @include grid-layout(3);
+    }
   }
   &-item {
-    @include grid-content();
-    border-bottom: 0.125rem solid $divider-color;
-    margin-top: 1rem;
-  }
-  &-rating {
     @include grid-block();
-    @include grid-layout(5);
-    @extend .small-10;
-    margin-left: 0;
+    margin-top: 0.5rem;    
+  }
+  &-ratings {
+    @include grid-content();
     &-star {
-      @include grid-content();
-      background-size: 3rem;
-      height: 3rem;
-      width: 3rem;
+      // @include grid-content();
+      @extend .small-3;
+      padding: 1rem 1rem 0rem -0.25rem;
+      background-size: 4.5rem;
+      height: 4.5rem;
+      width: 4.5rem;
       background-image: url('../img/star.png');
       background-repeat: no-repeat;
+      background-position: center;
     }
     &-no-star {
       @include grid-content();
@@ -45,5 +160,17 @@
       background-image: url('../img/unstar.png');
       background-repeat: no-repeat; 
     }
+    &-number {
+      text-align: center;
+      padding-top: 1.25rem;
+      font-size: 1.25rem;
+      font-weight: $heavy-text;      
+      color: $gray;
+    }
+  }  
+  &-details {
+    @include grid-content();
+    border-bottom: 1px solid $gray;
+    padding-bottom: 1rem;
   }
 }

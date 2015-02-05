@@ -1,0 +1,32 @@
+
+<div class="header">
+  <span class="title left">Beer Club</span>
+  <span class="new-beer right">
+    <a href="#" zf-toggle="new-beer-panel">+</a>
+  </span>
+</div>
+
+<div class="app-container">
+  <div zf-panel="" class="new-beer-panel" id="new-beer-panel">
+    <span class="new-beer-search">
+      <input type="search" placeholder="Allagash Saison"></input>
+      <div class="button secondary">Search</div>
+    </span>
+  </div>
+  <div class="container">
+    <div class="beer-container">
+      <div class="beer-list">
+        <div class="beer-item" ng-repeat="beer in beers">
+          <div class="beer-ratings-star">
+            <h4 class="beer-ratings-number">{{beer.rating}}</h4>
+          </div>
+          <div class="beer-details">
+            <div class="beer-name">{{beer.name}}</div>
+            <div class="beer-brewery">{{beer.brewery}}</div>
+            <div class="beer-location">{{beer.location}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -23,6 +23,10 @@ hr {
   display: block;
 }
 
+.small-up-1 {
+  overflow-y: auto;
+}
+
 //Centering Images
 
 .horizon {
@@ -43,6 +47,27 @@ hr {
 
 // base styles
 
+#view {
+  // @include grid-frame();
+}
+
 .container {
-  // @include grid-frame;
+  @include grid-block();
+  // @include grid-layout(1);
+}
+
+.menu-container {
+  @include grid-block();  
+}
+
+// grid test
+
+.gray {
+  background-color: $gray;
+  &-light {
+    background-color: $gray-light;
+  }
+  &-blue {
+    background-color: $gray-blue;
+  }
 }

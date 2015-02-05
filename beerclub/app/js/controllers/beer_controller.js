@@ -1,5 +1,6 @@
 app.controller('beerCtrl', ['$scope', '$http', function ($scope, $http) {
   
+  // $scope.brewerydb = ;
 
   $http.get('/beers').
       success (function(data, status){
