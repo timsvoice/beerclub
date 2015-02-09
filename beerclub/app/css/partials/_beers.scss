@@ -1,68 +1,3 @@
-// .new-beer {
-//   @include grid-block();
-//   @extend .small-12;
-//   background-color: $beer-color;
-//   margin-bottom: 1rem;
-//   &-button {
-//     @include grid-content();
-//   }
-//   &-title {
-//     text-align: center;
-//     padding: 1rem;
-//   }
-//   &-container {
-//     @include grid-block();
-//     // @include grid-layout(1);
-//   }
-// }  
-
-// .beer {
-//   &-container {
-//     // @include grid-block();
-//   }
-//   &-list {
-//     @include grid-block();
-//     @include grid-layout(3);
-//     @include breakpoint(small) {
-//       @include grid-layout(1);
-//     } 
-//   }
-//   &-item {
-//     @include grid-content();
-//     border-bottom: 0.125rem solid $divider-color;
-//     margin-top: 1rem;
-//   }
-//   &-rating {
-//     @include grid-block();
-//     @include grid-layout(5);
-//     @extend .small-10;
-//     margin-left: 0;
-//     &-star {
-//       @include grid-content();
-//       background-size: 3rem;
-//       height: 3rem;
-//       width: 3rem;
-//       background-image: url('../img/star.png');
-//       background-repeat: no-repeat;
-//     }
-//     &-no-star {
-//       @include grid-content();
-//       background-size: 3rem;
-//       height: 3rem;
-//       width: 3rem;
-//       background-image: url('../img/unstar.png');
-//       background-repeat: no-repeat; 
-//     }
-//   }
-// }
-
-.view {
-  // @include grid-frame(vertical);
-  // @extend .grid-frame;
-  // @extend .vertical;
-  // @extend .shrink, .wrap;
-}
-
 .header {
   @extend %title-bar;
   border-bottom: 1px solid $gray;
@@ -162,8 +97,8 @@
     }
     &-number {
       text-align: center;
-      padding-top: 1.25rem;
-      font-size: 1.25rem;
+      padding-top: 1.5rem;
+      font-size: 1rem;
       font-weight: $heavy-text;      
       color: $gray;
     }

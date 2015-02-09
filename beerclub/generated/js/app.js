@@ -3778,6 +3778,20 @@ app.controller('beerCtrl', ['$scope', '$http', function ($scope, $http) {
         }
       );
 }]);
+app.controller('brewdbCtrl', ['$scope', '$http', function ($scope, $http) {
+  
+  $scope.brewerydb_key ='b7336846d8cc7073b22ed905911c5f3b';
+  $scope.cors = 'http://www.corsproxy.com/';
+
+  $http.get($scope.cors + 'api.brewerydb.com/v2/beers/random?key=' + $scope.brewerydb_key + '').
+      success (function(data, status){
+          console.log(data);
+        }).
+        error (function(data) {
+          console.log('fail');
+        }
+      );
+}]);
 app.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /
@@ -3788,7 +3802,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('beer', {
       url: "/",
       templateUrl: "beer.html",
-      controller: "beerCtrl"
+      controller: "brewdbCtrl"
     })
     .state('gird', {
       url: "/grid",

@@ -8,7 +8,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('beer', {
       url: "/",
       templateUrl: "beer.html",
-      controller: "beerCtrl"
+      controller: "brewdbCtrl"
     })
     .state('gird', {
       url: "/grid",
