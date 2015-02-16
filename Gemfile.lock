@@ -28,9 +28,21 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
+    brewerydb (0.0.4)
+      hashie (>= 1.0.0)
+      httparty (>= 0.7.3)
     builder (3.2.2)
+    dotenv (1.0.2)
+    dotenv-rails (1.0.2)
+      dotenv (= 1.0.2)
     erubis (2.7.0)
+    figaro (1.1.0)
+      thor (~> 0.14)
+    hashie (3.4.0)
     hike (1.2.3)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     json (1.8.2)
     mail (2.6.3)
@@ -38,6 +50,7 @@ GEM
     mime-types (2.4.3)
     minitest (5.5.1)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     pg (0.18.1)
     rack (1.5.2)
     rack-test (0.6.3)
@@ -81,6 +94,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  brewerydb
+  dotenv-rails
+  figaro
+  httparty
   pg
   rails (= 4.1.6)
   rails-api

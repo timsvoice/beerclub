@@ -25,8 +25,8 @@ angular.module("ngApp").run(["$templateCache", function($templateCache) {
     "          </div>\n" +
     "          <div class=\"beer-details\">\n" +
     "            <div class=\"beer-name\">{{beer.name}}</div>\n" +
-    "            <div class=\"beer-brewery\">{{beer.brewery}}</div>\n" +
-    "            <div class=\"beer-location\">{{beer.location}}</div>\n" +
+    "            <div class=\"beer-brewery\">{{beer.breweries[0].name}}</div>\n" +
+    "            <div class=\"beer-location\">{{beer.style.name}}</div>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "      </div>\n" +

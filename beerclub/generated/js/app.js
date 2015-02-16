@@ -3763,9 +3763,7 @@ var app = angular.module('ngApp',[
 
 app.controller('beerCtrl', ['$scope', '$http', function ($scope, $http) {
   
-  // $scope.brewerydb = ;
-
-  $http.get('/beers').
+  $http.get('/beers/cBLTUw').
       success (function(data, status){
           $scope.beers = data;
           angular.forEach(data, function(value, index) {
@@ -3777,21 +3775,7 @@ app.controller('beerCtrl', ['$scope', '$http', function ($scope, $http) {
           });
         }
       );
-}]);
-app.controller('brewdbCtrl', ['$scope', '$http', function ($scope, $http) {
-  
-  $scope.brewerydb_key ='b7336846d8cc7073b22ed905911c5f3b';
-  $scope.cors = 'http://www.corsproxy.com/';
-
-  $http.get($scope.cors + 'api.brewerydb.com/v2/beers/random?key=' + $scope.brewerydb_key + '').
-      success (function(data, status){
-          console.log(data);
-        }).
-        error (function(data) {
-          console.log('fail');
-        }
-      );
-}]);
+  }]);
 app.config(function($stateProvider, $urlRouterProvider) {
   //
   // For any unmatched url, redirect to /
@@ -3802,7 +3786,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     .state('beer', {
       url: "/",
       templateUrl: "beer.html",
-      controller: "brewdbCtrl"
+      controller: "beerCtrl"
     })
     .state('gird', {
       url: "/grid",
@@ -3837,8 +3821,8 @@ angular.module("ngApp").run(["$templateCache", function($templateCache) {
     "          </div>\n" +
     "          <div class=\"beer-details\">\n" +
     "            <div class=\"beer-name\">{{beer.name}}</div>\n" +
-    "            <div class=\"beer-brewery\">{{beer.brewery}}</div>\n" +
-    "            <div class=\"beer-location\">{{beer.location}}</div>\n" +
+    "            <div class=\"beer-brewery\">{{beer.breweries[0].name}}</div>\n" +
+    "            <div class=\"beer-location\">{{beer.style.name}}</div>\n" +
     "          </div>\n" +
     "        </div>\n" +
     "      </div>\n" +
